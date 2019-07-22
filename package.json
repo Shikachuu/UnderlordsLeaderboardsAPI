@@ -1,0 +1,15 @@
+{
+  "name": "ul-api-leaderboards",
+  "version": "0.0.1",
+  "description": "Scrape the Underlords.com for a leaderboards API.",
+  "main": "index.js",
+  "author": "Shika",
+  "dependencies": {
+    "express": "latest",
+    "request": "latest",
+    "cheerio": "latest"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}
