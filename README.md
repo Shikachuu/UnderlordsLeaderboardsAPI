@@ -2,7 +2,9 @@
 ## UNOFFICAL
 
 ![Alsó szöveg](https://david-dm.org/Shikachuu/UnderlordsLeaderboardsAPI.svg)
+
 ![GitHub](https://img.shields.io/github/license/Shikachuu/UnderlordsLeaderboardsAPI.svg)
+
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Shikachuu/UnderlordsLeaderboardsAPI.svg)
 
 ### Status: Under development
