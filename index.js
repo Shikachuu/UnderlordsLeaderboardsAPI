@@ -7,11 +7,15 @@ var app = express();
 
 app.get('/', (req,res)=>{
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(getData));
+    getData((data)=>{
+        res.send(JSON.stringify(data));
+    });
 });
 
 app.get('byRank/:from-:to?', (req,res)=>{
-    
+    /*if (req.param('to') === ) {
+        
+    }*/
 });
 app.get('/byName/', (req,res)=>{
 
