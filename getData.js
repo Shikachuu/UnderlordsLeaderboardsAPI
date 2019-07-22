@@ -14,4 +14,4 @@ function getData() {
     });
     return array;
 }
-console.log(getData());
+//console.log(getData());
