@@ -12,6 +12,11 @@ This API is using the following libraries:
 - [Cheerio](https://github.com/cheeriojs/cheerio)
 - [Express](https://github.com/expressjs/express/)
 
-Feel free to ask for contribution.
+###ToDo
+- Write test
+- Insert a CI-CD bot
+- Make the first deployment pipe for demo porpuses.
+
+*Feel free to ask for contribution.*
 
 _All data and copyright material present here is the intellectual property of Valve Corporation, including the names of the players and every parameter connected to them that is derived to this website. Should you have any legal concerns, please contact me at shikachu@pm.me_
