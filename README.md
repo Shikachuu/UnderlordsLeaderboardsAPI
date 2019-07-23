@@ -19,4 +19,4 @@ This API is using the following libraries:
 
 *Feel free to ask for contribution.*
 
-_All data and copyright material present here is the intellectual property of Valve Corporation, including the names of the players and every parameter connected to them that is derived to this website. Should you have any legal concerns, please contact me at shikachu@pm.me_
+_All data and copyright material present here is the intellectual property of Valve Corporation, including the names of the players and every parameter connected to them that is derived to this API. Should you have any legal concerns, please contact me at shikachu@pm.me_
