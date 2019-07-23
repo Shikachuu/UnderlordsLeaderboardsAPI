@@ -1,8 +1,9 @@
 # Dota Underlords Leaderbords API
 ## UNOFFICAL
 
-| ![Alsó szöveg](https://david-dm.org/Shikachuu/UnderlordsLeaderboardsAPI.svg) | ![GitHub pull requests](https://img.shields.io/github/issues-pr/Shikachuu/UnderlordsLeaderboardsAPI.svg) |
-|---|---|
+![Alsó szöveg](https://david-dm.org/Shikachuu/UnderlordsLeaderboardsAPI.svg)
+
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Shikachuu/UnderlordsLeaderboardsAPI.svg)
 
 ### Status: Under development
 This API is an alternative way to use the Underlords Leaderboards. Basicly I just Web Scrapped the original site and fetch and API from it.
