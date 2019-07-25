@@ -1,26 +1,10 @@
 "use strict";
 //inject dependencies
 var express = require('express');//express webserver
-var request = require('request');
-var cheerio = require('cheerio');//server side jquery
 var fs = require('fs');
-
+var getData = require('./getData');
 var app = express();
-
 var port = (typeof process.env.PORT !== 'undefined' ? process.env.PORT : '3000');
-function getData(callback) {
-    let url = 'https://underlords.com/leaderboard';
-    let players = [];
-    request(url, (error, response, html)=>{
-        if (!error) {
-            var $ = cheerio.load(html);
-            $('.row .player').each((i,elem)=>{
-                players.push($(elem).filter('.player').text());
-            });
-            callback(players);
-        }
-    });
-}
 
 app.get('/', (req,res)=>{
     res.setHeader('Content-Type', 'application/json');//return header is json data
@@ -42,6 +26,7 @@ app.get('/byRank/:from-:to', (req,res)=>{
         }
     });
 });
+
 app.get('/byName/:name', (req,res)=>{
     getData(function (data) {
         if (data != []) {
@@ -57,6 +42,5 @@ app.get('/byName/:name', (req,res)=>{
     })
 });
 
-app.listen(port);
-console.log("Serving on port "+port);
+app.listen(port,()=> console.log("Serving on port "+port));
 exports = module.exports = app;

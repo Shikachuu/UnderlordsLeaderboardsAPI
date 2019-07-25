@@ -10,6 +10,10 @@
     "cheerio": "latest"
   },
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "test": "jest /test --detectOpenHandles"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
