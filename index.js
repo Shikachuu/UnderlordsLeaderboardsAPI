@@ -17,6 +17,7 @@ client.on('error',err =>{
 
 
 app.get('/', (req,res)=>{
+    console.log(req.ip);
     res.setHeader('Content-Type', 'application/json');//return header is json data
     client.get("root", (err,root)=>{
         if (root) {
@@ -31,6 +32,7 @@ app.get('/', (req,res)=>{
 });
 
 app.get('/byRank/:from-:to', (req,res)=>{
+    console.log(req.ip);
     client.get(`byRank/${req.param("from")}-${req.param("to")}`,(err,byRank)=>{
         if (byRank) {
             res.setHeader('Content-Type', 'application/json');
@@ -54,6 +56,7 @@ app.get('/byRank/:from-:to', (req,res)=>{
 });
 
 app.get('/byName/:name', (req,res)=>{
+    console.log(req.ip);
     client.get(`byName/${req.param("name")}`,(err,byName)=>{
         if (byName) {
             res.setHeader('Content-Type', 'application/json');
