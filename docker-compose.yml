@@ -1,5 +1,8 @@
 version: '2.1'
 
+networks: 
+  internal:
+
 services:
   ul-api-leaderboards:
     image: ul-api-leaderboards
@@ -7,5 +10,13 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3000
+      REDIS_URL: redis://redis-cache:6379
     ports:
       - 3000:3000
+    networks: 
+      - internal
+
+  redis-cache:
+    image: redis:5.0.5-alpine
+    networks: 
+      - internal
