@@ -12,9 +12,11 @@
   },
   "scripts": {
     "start": "node .",
-    "test": "jest /test --detectOpenHandles"
+    "lint": "./node_modules/.bin/eslint *.js --fix",
+    "test": "jest /test --forceExit --coverage --verbose"
   },
   "devDependencies": {
+    "eslint": "^6.1.0",
     "jest": "^24.8.0",
     "supertest": "^4.0.2",
     "supertest-as-promised": "^4.0.2"

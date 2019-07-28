@@ -1,1 +1,15 @@
 /node_modules
+# OS metadata
+.DS_Store
+Thumbs.db
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+# Coverage reports
+coverage

@@ -1,18 +1,17 @@
-var request = require('request');
-var cheerio = require('cheerio');//server side jquery
-var fs = require('fs');
+var request = require("request");
+var cheerio = require("cheerio");//server side jquery
 
-function getData(callback) {
-    let url = 'https://underlords.com/leaderboard';
-    let players = [];
-    request(url, (error, response, html)=>{
-        if (!error) {
-            var $ = cheerio.load(html);
-            $('.row .player').each((i,elem)=>{
-                players.push($(elem).filter('.player').text());
-            });
-            callback(players);
-        }
-    });
-}
+let getData = function scrapDataFromHtml(callback) {
+	let url = "https://underlords.com/leaderboard";
+	let players = [];
+	request(url, (error, _response, html)=>{
+		if (!error) {
+			var $ = cheerio.load(html);
+			$(".row .player").each((_i, elem)=>{
+				players.push($(elem).filter(".player").text());
+			});
+			callback(players);
+		}
+	});
+};
 exports = module.exports = getData;
