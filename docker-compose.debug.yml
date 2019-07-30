@@ -1,12 +1,23 @@
 version: '2.1'
-
+networks: 
+  internal:
 services:
   ul-api-leaderboards:
-    image: ul-api-leaderboards
-    build: .
+    image: ul-api-leaderboards-test
+    build:
+      context: .
+      dockerfile: ./test/Dockerfile
     environment:
       NODE_ENV: development
+      PORT: 3000
+      REDIS_URL: redis://redis-cache:6379
     ports:
       - 3000:3000
-      - 9229:9229
-    command: node --inspect=0.0.0.0:9229 index.js
+    command: npm test
+    networks: 
+      - internal
+
+  redis-cache:
+    image: redis:5.0.5-alpine
+    networks: 
+      - internal

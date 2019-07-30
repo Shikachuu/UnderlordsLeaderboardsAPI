@@ -1,17 +1,15 @@
 sudo: false
 language: node_js
 node_js:
-    - "8"
-    - "9"
-    - "10"
+  - "8"
+  - "9"
+  - "10"
   - "stable"
 services:
   - redis-server
 cache:
   directories:
     - "node_modules"
-services:
-    - redis
 script:
     - npm install
     - npm run test
