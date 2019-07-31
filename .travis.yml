@@ -1,15 +1,16 @@
-sudo: false
+--- 
+cache: 
+  directories: 
+    - node_modules
 language: node_js
-node_js:
+node_js: 
   - "8"
   - "9"
   - "10"
-  - "stable"
-services:
+  - stable
+script: 
+  - "npm install"
+  - "npm run test"
+services: 
   - redis-server
-cache:
-  directories:
-    - "node_modules"
-script:
-  - npm install
-  - npm run test
+sudo: false
