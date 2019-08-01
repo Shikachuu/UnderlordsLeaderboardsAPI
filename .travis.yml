@@ -1,4 +1,4 @@
---- 
+sudo: false
 cache: 
   directories: 
     - node_modules
@@ -7,10 +7,8 @@ node_js:
   - "8"
   - "9"
   - "10"
-  - stable
+services: 
+  - redis-server
 script: 
   - "npm install"
   - "npm run test"
-services: 
-  - redis-server
-sudo: false
