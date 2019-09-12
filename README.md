@@ -5,8 +5,6 @@
 
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Shikachuu/UnderlordsLeaderboardsAPI.svg)
 
-[![Build Status](https://travis-ci.com/Shikachuu/UnderlordsLeaderboardsAPI.svg?branch=master)](https://travis-ci.com/Shikachuu/UnderlordsLeaderboardsAPI)
-
 ### Status: Under development
 This API is an alternative way to use the Underlords Leaderboards. Basicly I just Web Scrapped the original site and fetch an API from it.
 This API is using the following libraries:
